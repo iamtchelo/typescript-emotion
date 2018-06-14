@@ -5,5 +5,13 @@
       "config/**/*.js",
       "node_modules/**/*.ts"
     ]
+  },
+  "rules": {
+    "deprecation": true,
+    "no-unused-variable": true,
+    "no-unused-expression": true,
+    "interface-name": [true, "never-prefix"],
+    "no-console": { "severity": "warning" },
+    "prefer-const-enum": true
   }
 }
