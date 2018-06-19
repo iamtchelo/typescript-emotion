@@ -12,6 +12,7 @@
     "no-unused-expression": true,
     "interface-name": [true, "never-prefix"],
     "no-console": { "severity": "warning" },
-    "prefer-const-enum": true
+    "prefer-const-enum": true,
+    "max-classes-per-file": true
   }
 }
