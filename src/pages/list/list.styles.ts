@@ -52,6 +52,8 @@ export const pokemonNameStyle = () => css`
   padding: 10px 0;
   text-align: center;
   background: white;
+  font-weight: normal;
+  text-transform: capitalize;
   color: #808080;
 `;
 
