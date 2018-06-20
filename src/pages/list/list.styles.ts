@@ -1,7 +1,12 @@
 import { css } from 'react-emotion';
-import { TitleProps } from './list.elements';
+import { ListItem, TitleProps } from './list.elements';
 
 export const listWrapperStyle = () => css``;
+
+export const containerStyle = () => css`
+  width: 950px;
+  margin: auto;
+`;
 
 export const titleStyle = ({ size = 1 }: TitleProps) => css`
   padding: 15px 0;
@@ -15,9 +20,8 @@ export const titleStyle = ({ size = 1 }: TitleProps) => css`
 export const listContentStyle = () => css`
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
-  margin: 50px auto;
-  width: 900px;
+  justify-content: space-around;
+  margin-top: 30px;
 `;
 
 export const cardStyle = () => css`
@@ -40,4 +44,30 @@ export const pokemonNameStyle = () => css`
   text-align: center;
   background: white;
   color: #808080;
+`;
+
+export const listNavStyle = () => css`
+  display: flex;
+  padding: 40px 40px 0 0;
+  flex-direction: row-reverse;
+`;
+
+export const listNavItemStyle = () => css`
+  padding: 10px 40px;
+  cursor: pointer;
+  outline: none;
+  font-size: 14px;
+  border: 1px solid #7769A2;
+  color: #414141;
+  background: white;
+  transition: background 0.1s linear, color 0.2s ease-out;
+
+  &:first-child {
+    border-left: none;
+  }
+`;
+
+export const listNavItemActivedStyle = ({ actived }: ListItem) => actived && css`
+  background: #4E3C88;
+  color: white;
 `;

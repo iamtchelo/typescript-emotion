@@ -1,13 +1,31 @@
 import styled from 'react-emotion';
-
-import { avatarStyle, cardStyle, listContentStyle, listWrapperStyle, pokemonNameStyle, titleStyle } from './list.styles';
+import {
+  avatarStyle,
+  cardStyle,
+  containerStyle,
+  listContentStyle,
+  listNavItemActivedStyle,
+  listNavItemStyle,
+  listNavStyle,
+  listWrapperStyle,
+  pokemonNameStyle,
+  titleStyle
+} from './list.styles';
 
 export interface TitleProps {
   size?: number;
 }
 
+export interface ListItem {
+  actived?: boolean;
+}
+
 export const ListWrapper = styled('div')`
   ${listWrapperStyle};
+`;
+
+export const Container = styled('div')`
+  ${containerStyle};
 `;
 
 export const Title = styled('h1')`
@@ -28,4 +46,13 @@ export const PokemonAvatar = styled('img')`
 
 export const PokemonName = styled('h4')`
   ${pokemonNameStyle};
+`;
+
+export const ListNav = styled('div')`
+  ${listNavStyle};
+`;
+
+export const ListNavItem = styled('button')`
+  ${listNavItemStyle};
+  ${listNavItemActivedStyle};
 `;

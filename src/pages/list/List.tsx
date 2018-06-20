@@ -1,9 +1,12 @@
 import * as React from 'react';
 import pokemons from '../../data/mock';
-import { 
+import {
   Card,
+  Container,
   ListContent,
-  ListWrapper, 
+  ListNav,
+  ListNavItem,
+  ListWrapper,
   PokemonAvatar,
   PokemonName,
   Title
@@ -12,14 +15,20 @@ import {
 const List: React.SFC = props => (
   <ListWrapper>
     <Title size={1.5}>TypeScript + Emotion = ♥</Title>
-    <ListContent>
-      {pokemons.map(pokemon =>
-        <Card key={pokemon.name}>
-          <PokemonAvatar src={pokemon.avatar} />
-          <PokemonName>{pokemon.name}</PokemonName>
-        </Card>
-      )}
-    </ListContent>
+    <Container>
+      <ListNav>
+        <ListNavItem actived={true}>Grid</ListNavItem>
+        <ListNavItem>List</ListNavItem>
+      </ListNav>
+      <ListContent>
+        {pokemons.map(pokemon =>
+          <Card key={pokemon.name}>
+            <PokemonAvatar src={pokemon.avatar} />
+            <PokemonName>{pokemon.name}</PokemonName>
+          </Card>
+        )}
+      </ListContent>
+    </Container>
   </ListWrapper>
 );
 
