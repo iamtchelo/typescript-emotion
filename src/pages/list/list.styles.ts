@@ -32,6 +32,15 @@ export const cardStyle = () => css`
   width: 120px;
   background: #E0E0E0;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-out;
+
+  &:nth-child(even):hover {
+    transform: scale(1.15) rotate(10deg);
+  }
+
+  &:nth-child(odd):hover {
+    transform: scale(1.15) rotate(-10deg);
+  }
 `;
 
 export const avatarStyle = () => css`
