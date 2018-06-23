@@ -1,5 +1,6 @@
 import { css } from 'react-emotion';
-import { ListItem, TitleProps } from './list.elements';
+import { ContentProps, ListItem, TitleProps } from './list.elements';
+import { RenderType } from './list.hoc';
 
 export const listWrapperStyle = () => css``;
 
@@ -17,9 +18,11 @@ export const titleStyle = ({ size = 1 }: TitleProps) => css`
   color: white;
 `;
 
-export const listContentStyle = () => css`
+export const listContentStyle = ({ renderType }: ContentProps) => css`
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: ${renderType === RenderType.Grid ? 'row' : 'column'};
+  align-content: ${renderType === RenderType.List && 'center'};
+  flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 30px;
 `;
@@ -43,8 +46,31 @@ export const cardStyle = () => css`
   }
 `;
 
+export const cardListStyle = ({ renderType }: ContentProps) => renderType === RenderType.List && css`
+  width: 350px;
+  height: 300px;
+  border: 5px solid white;
+
+  &:nth-child(even):hover,
+  &:nth-child(odd):hover {
+    transform: none;
+  }
+
+  & > img {
+    width: 120px;
+    border: none;
+  }
+
+  & > h4 {
+    padding: 15px 0;
+  }
+`;
+
 export const avatarStyle = () => css`
+  margin: auto;
   padding: 5px;
+  width: 100%;
+  height: auto;
   border: 5px solid white;
 `;
 

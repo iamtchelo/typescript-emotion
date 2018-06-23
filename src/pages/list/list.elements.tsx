@@ -1,6 +1,8 @@
 import styled from 'react-emotion';
+import { RenderType } from './list.hoc';
 import {
   avatarStyle,
+  cardListStyle,
   cardStyle,
   containerStyle,
   listContentStyle,
@@ -18,6 +20,10 @@ export interface TitleProps {
 
 export interface ListItem {
   actived?: boolean;
+}
+
+export interface ContentProps {
+  renderType: RenderType;
 }
 
 export const ListWrapper = styled('div')`
@@ -38,6 +44,7 @@ export const ListContent = styled('div')`
 
 export const Card = styled('div')`
   ${cardStyle};
+  ${cardListStyle};
 `;
 
 export const PokemonAvatar = styled('img')`
