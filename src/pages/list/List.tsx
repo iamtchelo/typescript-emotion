@@ -11,18 +11,37 @@ import {
   PokemonName,
   Title
 } from './list.elements';
+import { EnhancedListProps, RenderType } from './list.hoc';
 
-const List: React.SFC = props => (
+const List: React.SFC<EnhancedListProps> = ({
+  renderType,
+  setRenderType
+}) => (
   <ListWrapper>
     <Title size={1.5}>TypeScript + Emotion = ♥</Title>
     <Container>
       <ListNav>
-        <ListNavItem actived={true}>Grid</ListNavItem>
-        <ListNavItem>List</ListNavItem>
+        <ListNavItem
+          actived={renderType === RenderType.Grid}
+          // tslint:disable-next-line
+          onClick={() => setRenderType(RenderType.Grid)}
+        >
+          Grid
+        </ListNavItem>
+        <ListNavItem
+          actived={renderType === RenderType.List}
+          // tslint:disable-next-line
+          onClick={() => setRenderType(RenderType.List)}
+        >
+          List
+        </ListNavItem>
       </ListNav>
-      <ListContent>
+      <ListContent renderType={renderType}>
         {pokemons.map(pokemon =>
-          <Card key={pokemon.name}>
+          <Card
+            key={pokemon.name}
+            renderType={renderType}
+          >
             <PokemonAvatar src={pokemon.avatar} />
             <PokemonName>{pokemon.name}</PokemonName>
           </Card>
