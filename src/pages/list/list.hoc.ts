@@ -5,7 +5,7 @@ export const enum RenderType {
 }
 
 export interface ListProps {
-  renderType?: RenderType;
+  renderType: RenderType;
 }
 
 export interface ListDispatches {
@@ -16,5 +16,5 @@ export type EnhancedListProps = ListProps & ListDispatches;
 
 export default compose(
   setDisplayName('List.Hoc'),
-  withState('renderType', 'setRenderType', RenderType.Grid)
+  withState('renderType', 'setRenderType', ({ renderType }: any) => renderType)
 ) as ComponentEnhancer<EnhancedListProps, ListProps>;

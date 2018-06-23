@@ -11,9 +11,9 @@ describe('<List.Hoc />', () => {
     expect(getDisplayName(EnhancedComponent)).toEqual('List.Hoc');
   });
 
-  it('renderType should be grid by default', () => {
+  it('renderType should be grid', () => {
     const EnhancedComponent = enhance(Base);
-    const wrapper = mount(<EnhancedComponent />);
+    const wrapper = mount(<EnhancedComponent renderType={RenderType.Grid} />);
     const props = wrapper.find<EnhancedListProps>(Base).props();
 
     expect(props.renderType).toEqual(RenderType.Grid);
@@ -21,7 +21,7 @@ describe('<List.Hoc />', () => {
 
   it('should change renderType', () => {
     const EnhancedComponent = enhance(Base);
-    const wrapper = mount(<EnhancedComponent />);
+    const wrapper = mount(<EnhancedComponent renderType={RenderType.Grid} />);
     const { setRenderType } = wrapper.find<EnhancedListProps>(Base).props();
 
     setRenderType(RenderType.List);
