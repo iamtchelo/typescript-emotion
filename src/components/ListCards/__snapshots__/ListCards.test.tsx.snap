@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListCards /> should render grid by default 1`] = `
+<Styled(div)
+  renderType="grid"
+/>
+`;
+
+exports[`<ListCards /> should render list 1`] = `
+<Styled(div)
+  renderType="list"
+/>
+`;
