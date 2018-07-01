@@ -1,20 +1,16 @@
 import { ComponentEnhancer, compose, setDisplayName, withState } from 'recompose';
 
-export const enum RenderType {
-  List, Grid
-}
-
 export interface ListProps {
-  renderType: RenderType;
+  renderType?: 'grid' | 'list';
 }
 
 export interface ListDispatches {
-  setRenderType: (type: RenderType) => void;
+  setRenderType: (type: 'grid' | 'list') => void;
 }
 
 export type EnhancedListProps = ListProps & ListDispatches;
 
 export default compose(
   setDisplayName('List.Hoc'),
-  withState('renderType', 'setRenderType', ({ renderType }: any) => renderType)
+  withState('renderType', 'setRenderType', ({ renderType = 'grid' }: any) => renderType)
 ) as ComponentEnhancer<EnhancedListProps, ListProps>;

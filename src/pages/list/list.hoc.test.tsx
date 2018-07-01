@@ -1,7 +1,7 @@
 import { mount } from 'enzyme';
 import * as React from 'react';
 import { getDisplayName } from 'recompose';
-import enhance, { EnhancedListProps, RenderType } from './list.hoc';
+import enhance, { EnhancedListProps } from './list.hoc';
 
 describe('<List.Hoc />', () => {
   const Base = () => <div />;
@@ -13,21 +13,21 @@ describe('<List.Hoc />', () => {
 
   it('renderType should be grid', () => {
     const EnhancedComponent = enhance(Base);
-    const wrapper = mount(<EnhancedComponent renderType={RenderType.Grid} />);
+    const wrapper = mount(<EnhancedComponent renderType="grid" />);
     const props = wrapper.find<EnhancedListProps>(Base).props();
 
-    expect(props.renderType).toEqual(RenderType.Grid);
+    expect(props.renderType).toEqual('grid');
   });
 
   it('should change renderType', () => {
     const EnhancedComponent = enhance(Base);
-    const wrapper = mount(<EnhancedComponent renderType={RenderType.Grid} />);
+    const wrapper = mount(<EnhancedComponent renderType="grid" />);
     const { setRenderType } = wrapper.find<EnhancedListProps>(Base).props();
 
-    setRenderType(RenderType.List);
+    setRenderType('list');
     wrapper.update();
 
     const { renderType } = wrapper.find<EnhancedListProps>(Base).props();
-    expect(renderType).toEqual(RenderType.List);
+    expect(renderType).toEqual('list');
   });
 });

@@ -1,52 +1,45 @@
 import * as React from 'react';
+import Button from '../../components/Button';
+import Card from '../../components/Card';
+import GroupButton from '../../components/GroupButton';
+import ListCards from '../../components/ListCards';
+import Navbar from '../../components/Navbar';
 import pokemons from '../../data/mock';
-import {
-  Card,
-  Container,
-  ListContent,
-  ListNav,
-  ListNavItem,
-  ListWrapper,
-  PokemonAvatar,
-  PokemonName,
-  Title
-} from './list.elements';
-import { EnhancedListProps, RenderType } from './list.hoc';
+import { Container, ListWrapper } from './list.elements';
+import { EnhancedListProps } from './list.hoc';
 
 const List: React.SFC<EnhancedListProps> = ({
   renderType,
   setRenderType
 }) => (
   <ListWrapper>
-    <Title size={1.5}>TypeScript + Emotion = ♥</Title>
+    <Navbar title="TypeScript + Emotion = ♥" />
     <Container>
-      <ListNav>
-        <ListNavItem
-          actived={renderType === RenderType.Grid}
-          // tslint:disable-next-line
-          onClick={() => setRenderType(RenderType.Grid)}
+      <GroupButton>
+        <Button
+        // tslint:disable-next-line
+          onClick={() => setRenderType('grid')}
+          actived={renderType === 'grid'}
         >
           Grid
-        </ListNavItem>
-        <ListNavItem
-          actived={renderType === RenderType.List}
+        </Button>
+        <Button
           // tslint:disable-next-line
-          onClick={() => setRenderType(RenderType.List)}
+          onClick={() => setRenderType('list')}
+          actived={renderType === 'list'}
         >
           List
-        </ListNavItem>
-      </ListNav>
-      <ListContent renderType={renderType}>
+        </Button>
+      </GroupButton>
+      <ListCards renderType={renderType}>
         {pokemons.map(pokemon =>
           <Card
             key={pokemon.name}
-            renderType={renderType}
-          >
-            <PokemonAvatar src={pokemon.avatar} />
-            <PokemonName>{pokemon.name}</PokemonName>
-          </Card>
+            title={pokemon.name}
+            image={pokemon.avatar}
+          />
         )}
-      </ListContent>
+      </ListCards>
     </Container>
   </ListWrapper>
 );
