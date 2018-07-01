@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "emotion": "^9.2.3",
+    "emotion-theming": "^9.2.4",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-emotion": "^9.2.3",

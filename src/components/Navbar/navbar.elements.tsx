@@ -2,10 +2,10 @@ import styled from 'react-emotion';
 
 export const NavbarWrapper = styled('nav')`
   padding: 15px 0;
-  background: #4E3C88;
+  background: ${(props: any) => props.theme.navbar.background};
 `;
 
 export const NavbarTitle = styled('h3')`
-  color: white;
+  color: ${(props: any) => props.theme.navbar.titleColor};
   text-align: center;
 `;
