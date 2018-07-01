@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> should render with props 1`] = `
+<Styled(div)>
+  <Styled(img)
+    src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+  />
+  <Styled(h4)>
+    My card
+  </Styled(h4)>
+</Styled(div)>
+`;
