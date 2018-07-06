@@ -2,7 +2,7 @@
 
 exports[`<Button /> should render with actived style 1`] = `
 <button
-  class="css-68lmnf"
+  class="css-1yth3pp"
 >
   My button
 </button>
@@ -10,7 +10,7 @@ exports[`<Button /> should render with actived style 1`] = `
 
 exports[`<Button /> should render with default style 1`] = `
 <button
-  class="css-1k3qov9"
+  class="css-1n45izf"
 >
   My button
 </button>

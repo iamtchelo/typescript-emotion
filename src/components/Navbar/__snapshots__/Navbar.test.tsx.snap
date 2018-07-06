@@ -2,10 +2,10 @@
 
 exports[`<Navbar /> should render a default navbar with a title 1`] = `
 <nav
-  class="css-5fe59u"
+  class="css-14xwee0"
 >
   <h3
-    class="css-16rfh9r"
+    class="css-yzo0ge"
   >
     My navbar
   </h3>

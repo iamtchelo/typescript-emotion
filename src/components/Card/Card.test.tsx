@@ -1,6 +1,7 @@
 import { shallow } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 import * as React from 'react';
+import ThemeProvider from '../../themes';
 import Card from './Card';
 
 describe('<Card />', () => {
@@ -10,7 +11,11 @@ describe('<Card />', () => {
   }
   
   it('should render with props', () => {
-    const tree = shallow(<Card {...props} />);
+    const tree = shallow(
+      <ThemeProvider>
+        <Card {...props} />
+      </ThemeProvider>
+    );
 
     expect(shallowToJson(tree)).toMatchSnapshot();
   });

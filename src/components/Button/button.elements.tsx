@@ -2,7 +2,8 @@ import styled from 'react-emotion';
 
 const normalStyle = (props: any) => ({
   '&:hover': {
-    background: props.theme.button.backgroundHover
+    background: props.theme.button.backgroundHover,
+    color: props.theme.colors.white
   },
   background: props.theme.button.background,
   border: `1px solid ${props.theme.button.borderColor}`,
