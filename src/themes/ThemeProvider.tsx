@@ -6,11 +6,11 @@ import secondaryTheme from './secondary';
 const themes = {
   primary: primaryTheme,
   secondary: secondaryTheme
-}
+};
 
 export interface ThemeProviderProps {
   theme?: 'primary' | 'secondary'
-}
+};
 
 const ThemeProvider: React.SFC<ThemeProviderProps> = ({
   theme = 'primary', 
@@ -19,6 +19,6 @@ const ThemeProvider: React.SFC<ThemeProviderProps> = ({
   <Provider theme={themes[theme]}>
     {children}
   </Provider>
-)
+);
 
 export default ThemeProvider;

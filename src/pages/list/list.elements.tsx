@@ -6,3 +6,12 @@ export const Container = styled('div')`
   width: 950px;
   margin: auto;
 `;
+
+export const ActionsWrapper = styled('div')`
+  display: flex;
+  flex-direction: row-reverse;
+
+  & > div {
+    margin: 0 20px;
+  }
+`;
