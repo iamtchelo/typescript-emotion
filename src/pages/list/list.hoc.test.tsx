@@ -30,4 +30,24 @@ describe('<List.Hoc />', () => {
     const { renderType } = wrapper.find<EnhancedListProps>(Base).props();
     expect(renderType).toEqual('list');
   });
+
+  it('theme should be primary by default', () => {
+    const EnhancedComponent = enhance(Base);
+    const wrapper = mount(<EnhancedComponent />);
+    const props = wrapper.find<EnhancedListProps>(Base).props();
+
+    expect(props.theme).toEqual('primary');
+  });
+
+  it('should change theme', () => {
+    const EnhancedComponent = enhance(Base);
+    const wrapper = mount(<EnhancedComponent />);
+    const { setTheme } = wrapper.find<EnhancedListProps>(Base).props();
+
+    setTheme('secondary');
+    wrapper.update();
+
+    const { theme } = wrapper.find<EnhancedListProps>(Base).props();
+    expect(theme).toEqual('secondary');
+  });
 });
