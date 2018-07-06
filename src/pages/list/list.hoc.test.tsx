@@ -5,14 +5,13 @@ import enhance, { EnhancedListProps } from './list.hoc';
 
 describe('<List.Hoc />', () => {
   const Base = () => <div />;
+  const EnhancedComponent = enhance(Base);
 
   it('should verify the hoc name', () => {
-    const EnhancedComponent = enhance(Base);
     expect(getDisplayName(EnhancedComponent)).toEqual('List.Hoc');
   });
 
   it('renderType should be grid', () => {
-    const EnhancedComponent = enhance(Base);
     const wrapper = mount(<EnhancedComponent renderType="grid" />);
     const props = wrapper.find<EnhancedListProps>(Base).props();
 
@@ -20,7 +19,6 @@ describe('<List.Hoc />', () => {
   });
 
   it('should change renderType', () => {
-    const EnhancedComponent = enhance(Base);
     const wrapper = mount(<EnhancedComponent renderType="grid" />);
     const { setRenderType } = wrapper.find<EnhancedListProps>(Base).props();
 
@@ -32,7 +30,6 @@ describe('<List.Hoc />', () => {
   });
 
   it('theme should be primary by default', () => {
-    const EnhancedComponent = enhance(Base);
     const wrapper = mount(<EnhancedComponent />);
     const props = wrapper.find<EnhancedListProps>(Base).props();
 
@@ -40,7 +37,6 @@ describe('<List.Hoc />', () => {
   });
 
   it('should change theme', () => {
-    const EnhancedComponent = enhance(Base);
     const wrapper = mount(<EnhancedComponent />);
     const { setTheme } = wrapper.find<EnhancedListProps>(Base).props();
 
