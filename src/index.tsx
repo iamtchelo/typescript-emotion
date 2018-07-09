@@ -1,7 +1,6 @@
-import { ThemeProvider } from 'emotion-theming';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { primaryTheme } from './themes';
+import ThemeProvider from './themes';
 
 import './globalStyle';
 
@@ -9,8 +8,10 @@ import List from './pages/list';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
-  <ThemeProvider theme={primaryTheme}>
-    <List />
+  <ThemeProvider>
+    {(props: any) => (
+      <List {...props} />
+    )}
   </ThemeProvider>,
   document.getElementById('root') as HTMLElement
 );
