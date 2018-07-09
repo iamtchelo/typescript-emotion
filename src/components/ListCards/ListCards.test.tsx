@@ -8,7 +8,7 @@ describe('<ListCards />', () => {
   it('should render grid by default', () => {
     const tree = shallow(
       <ThemeProvider>
-        <ListCards />
+        {(props: any) => <ListCards {...props} />}
       </ThemeProvider>
     );
 
@@ -18,7 +18,7 @@ describe('<ListCards />', () => {
   it('should render list', () => {
     const tree = shallow(
       <ThemeProvider>
-        <ListCards renderType="list" />
+        {(props: any) => <ListCards renderType="list" {...props} />}
       </ThemeProvider>
     );
     

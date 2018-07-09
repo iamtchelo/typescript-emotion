@@ -8,7 +8,7 @@ describe('<GroupButton />', () => {
   it('should render with right direction by default', () => {
     const tree = shallow(
       <ThemeProvider>
-        <GroupButton />
+        {(props: any) => <GroupButton {...props} />}
       </ThemeProvider>
     );
 
@@ -18,7 +18,7 @@ describe('<GroupButton />', () => {
   it('should render with left direction', () => {
     const tree = shallow(
       <ThemeProvider>
-        <GroupButton direction="left" />
+        {(props: any) => <GroupButton direction="left" {...props} />}
       </ThemeProvider>
     );
 

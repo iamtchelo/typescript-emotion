@@ -5,7 +5,7 @@ import ThemeProvider from '../../themes';
 import Card from './Card';
 
 describe('<Card />', () => {
-  const props = {
+  const cardProps = {
     image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png',
     title: 'My card'
   }
@@ -13,7 +13,7 @@ describe('<Card />', () => {
   it('should render with props', () => {
     const tree = shallow(
       <ThemeProvider>
-        <Card {...props} />
+        {(props: any) => <Card {...props} {...cardProps} />}
       </ThemeProvider>
     );
 

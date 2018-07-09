@@ -8,7 +8,7 @@ describe('<Navbar />', () => {
   test('should render a default navbar with a title', () => {
     const tree = render(
       <ThemeProvider>
-        <Navbar title="My navbar" />
+        {(props: any) => <Navbar title="My navbar" {...props} />}
       </ThemeProvider>
     );
     expect(renderToJson(tree)).toMatchSnapshot();

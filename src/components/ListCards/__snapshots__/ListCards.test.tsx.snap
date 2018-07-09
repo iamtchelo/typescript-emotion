@@ -2,68 +2,14 @@
 
 exports[`<ListCards /> should render grid by default 1`] = `
 <ThemeProvider
-  theme={
-    Object {
-      "button": Object {
-        "background": "#FFFFFF",
-        "backgroundActived": "#80a1c1",
-        "backgroundHover": "#7593b0",
-        "borderColor": "#80a1c1",
-        "color": "#414141",
-      },
-      "card": Object {
-        "titleColor": "#808080",
-      },
-      "colors": Object {
-        "gray": "#414141",
-        "grayDark": "#808080",
-        "grayLight": "#E0E0E0",
-        "primary": "#80a1c1",
-        "primaryHover": "#7593b0",
-        "white": "#FFFFFF",
-      },
-      "navbar": Object {
-        "background": "#80a1c1",
-        "titleColor": "#FFFFFF",
-      },
-    }
-  }
->
-  <ListCards />
-</ThemeProvider>
+  setTheme={[Function]}
+  theme="primary"
+/>
 `;
 
 exports[`<ListCards /> should render list 1`] = `
 <ThemeProvider
-  theme={
-    Object {
-      "button": Object {
-        "background": "#FFFFFF",
-        "backgroundActived": "#80a1c1",
-        "backgroundHover": "#7593b0",
-        "borderColor": "#80a1c1",
-        "color": "#414141",
-      },
-      "card": Object {
-        "titleColor": "#808080",
-      },
-      "colors": Object {
-        "gray": "#414141",
-        "grayDark": "#808080",
-        "grayLight": "#E0E0E0",
-        "primary": "#80a1c1",
-        "primaryHover": "#7593b0",
-        "white": "#FFFFFF",
-      },
-      "navbar": Object {
-        "background": "#80a1c1",
-        "titleColor": "#FFFFFF",
-      },
-    }
-  }
->
-  <ListCards
-    renderType="list"
-  />
-</ThemeProvider>
+  setTheme={[Function]}
+  theme="primary"
+/>
 `;
