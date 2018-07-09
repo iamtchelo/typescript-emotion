@@ -1,0 +1,10 @@
+language: node_js
+
+node_js:
+  - stable
+
+deploy:
+  provider: surge
+  project: ./build/
+  domain: typescript-emotion.sh
+  skip_cleanup: true
