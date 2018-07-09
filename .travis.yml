@@ -9,5 +9,5 @@ before_deploy:
 deploy:
   provider: surge
   project: ./build/
-  domain: typescript-emotion.sh
+  domain: typescript-emotion.surge.sh
   skip_cleanup: true
