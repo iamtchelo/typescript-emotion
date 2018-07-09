@@ -12,7 +12,8 @@
     "recompose": "^0.27.1"
   },
   "scripts": {
-    "start": "react-scripts-ts start",
+    "deploy": "NODE_ENV=production npm run build && surge -p build -d typescript-emotion.surge.sh",
+    "start": "NODE_ENV=development react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom"
   },
@@ -26,6 +27,7 @@
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.4",
+    "surge": "^0.20.1",
     "typescript": "^2.9.1"
   },
   "jest": {
