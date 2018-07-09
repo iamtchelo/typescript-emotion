@@ -1,4 +1,4 @@
-import { render, shallow } from 'enzyme';
+import { render } from 'enzyme';
 import { renderToJson } from 'enzyme-to-json';
 import * as React from 'react';
 import ThemeProvider from '../../themes';
