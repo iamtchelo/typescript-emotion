@@ -11,7 +11,7 @@ export const ListCardsWrapper = styled('div')`
   `};
 
   ${({ renderType }: ListCardsProps) => renderType === 'list' && css`
-    align-content: center;
+    align-items: center;
     flex-direction: column;
 
     & > div {

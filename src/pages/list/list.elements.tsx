@@ -9,6 +9,7 @@ export const Container = styled('div')`
 
 export const ActionsWrapper = styled('div')`
   display: flex;
+  justify-content: center;
   flex-direction: row-reverse;
 
   & > div {
