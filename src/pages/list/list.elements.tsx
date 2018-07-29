@@ -3,7 +3,8 @@ import styled from 'react-emotion';
 export const ListWrapper = styled('div')``;
 
 export const Container = styled('div')`
-  width: 950px;
+  width: 100%;
+  max-width: 950px;
   margin: auto;
 `;
 
@@ -14,5 +15,14 @@ export const ActionsWrapper = styled('div')`
 
   & > div {
     margin: 0 20px;
+  }
+
+  @media (max-width: 580px) {
+    flex-direction: column-reverse;
+    align-items: center;
+
+    & > div:first-child {
+      padding: 15px 0;
+    }
   }
 `;
