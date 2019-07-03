@@ -30,7 +30,6 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.4",
     "gh-pages": "^2.0.1",
-    "surge": "^0.20.1",
     "typescript": "^2.9.1"
   },
   "jest": {
