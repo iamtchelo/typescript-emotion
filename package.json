@@ -10,7 +10,7 @@
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-emotion": "^9.2.3",
-    "react-scripts-ts": "2.16.0",
+    "react-scripts-ts": "^4.0.8",
     "recompose": "^0.27.1"
   },
   "scripts": {
@@ -26,8 +26,8 @@
     "@types/react": "^16.3.17",
     "@types/react-dom": "^16.0.6",
     "@types/recompose": "^0.26.1",
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-to-json": "^3.3.4",
     "gh-pages": "^2.0.1",
     "typescript": "^2.9.1"
