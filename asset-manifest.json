@@ -1,4 +1,11 @@
 {
-  "main.js": "static/js/main.3724cc28.js",
-  "main.js.map": "static/js/main.3724cc28.js.map"
+  "main.js": "/typescript-emotion/static/js/main.56b1aacf.chunk.js",
+  "main.js.map": "/typescript-emotion/static/js/main.56b1aacf.chunk.js.map",
+  "static/js/1.f604d61a.chunk.js": "/typescript-emotion/static/js/1.f604d61a.chunk.js",
+  "static/js/1.f604d61a.chunk.js.map": "/typescript-emotion/static/js/1.f604d61a.chunk.js.map",
+  "runtime~main.js": "/typescript-emotion/static/js/runtime~main.25774fca.js",
+  "runtime~main.js.map": "/typescript-emotion/static/js/runtime~main.25774fca.js.map",
+  "index.html": "/typescript-emotion/index.html",
+  "precache-manifest.15935f937c1a55c2ef7375ceff6658f9.js": "/typescript-emotion/precache-manifest.15935f937c1a55c2ef7375ceff6658f9.js",
+  "service-worker.js": "/typescript-emotion/service-worker.js"
 }
