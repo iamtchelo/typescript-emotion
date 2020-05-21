@@ -1,37 +1,27 @@
-import styled, { css } from 'react-emotion';
-import { ListCardsProps } from './ListCards';
+import styled, {css} from 'react-emotion';
+import {ListCardsProps} from './ListCards';
+
+const listCardsBase = () => css`
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-rows: auto;
+`;
+
+const listCardsGrid = ({renderType}: ListCardsProps) =>
+  renderType === 'grid' &&
+  css`
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  `;
+
+const listCardsView = ({renderType}: ListCardsProps) =>
+  renderType === 'list' &&
+  css`
+    justify-content: center;
+    grid-template-columns: minmax(max-content, 250px);
+  `;
 
 export const ListCardsWrapper = styled('div')`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-
-  ${({ renderType }: ListCardsProps) => renderType === 'grid' && css`
-    flex-direction: row
-  `};
-
-  ${({ renderType }: ListCardsProps) => renderType === 'list' && css`
-    align-items: center;
-    flex-direction: column;
-
-    & > div {
-      width: 350px;
-      height: 300px;
-      border: 5px solid white;
-
-      &:nth-child(even):hover,
-      &:nth-child(odd):hover {
-        transform: none;
-      }
-
-      & > img {
-        width: 120px;
-        border: none;
-      }
-
-      & > h4 {
-        padding: 15px 0;
-      }
-    }
-  `};
+  ${listCardsBase};
+  ${listCardsGrid};
+  ${listCardsView};
 `;

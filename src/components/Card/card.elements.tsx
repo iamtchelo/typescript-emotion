@@ -2,10 +2,9 @@ import styled from 'react-emotion';
 
 export const CardWrapper = styled('div')`
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
-  margin: 20px;
-  width: 120px;
   background: ${(props: any) => props.theme.colors.primary};
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-out;
