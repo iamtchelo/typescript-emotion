@@ -1,6 +1,5 @@
 import * as React from 'react';
-import {Button} from '../../components';
-import Card from '../../components/Card';
+import {Button, Card} from '../../components';
 import GroupButton from '../../components/GroupButton';
 import ListCards from '../../components/ListCards';
 import Navbar from '../../components/Navbar';

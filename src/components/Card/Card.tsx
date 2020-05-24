@@ -1,19 +1,16 @@
 import * as React from 'react';
-import { CardImage, CardTitle, CardWrapper } from './card.elements';
+import {CardImage, CardTitle, CardWrapper} from './card.styles';
 
-export interface CardProps {
+interface CardProps {
   title: string;
   image: string;
 }
 
-const Card: React.SFC<CardProps> = ({
-  title,
-  image
-}) => (
+const Card: React.SFC<CardProps> = ({title, image}) => (
   <CardWrapper>
     <CardImage src={image} />
     <CardTitle>{title}</CardTitle>
   </CardWrapper>
 );
 
-export default Card;
+export {Card, CardProps};
