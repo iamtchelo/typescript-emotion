@@ -7,18 +7,11 @@ export const CardWrapper = styled('div')`
   justify-content: center;
   background: ${(props: any) => props.theme.colors.primary};
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease-out;
+  transition: box-shadow 120ms linear;
 
   &:hover {
     background: ${(props: any) => props.theme.colors.primaryHover};
-  }
-
-  &:nth-child(even):hover {
-    transform: scale(1.15) rotate(10deg);
-  }
-
-  &:nth-child(odd):hover {
-    transform: scale(1.15) rotate(-10deg);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   }
 `;
 
