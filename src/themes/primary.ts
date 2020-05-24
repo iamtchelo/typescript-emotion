@@ -4,7 +4,7 @@ const colors = {
   grayLight: '#E0E0E0',
   primary: '#80a1c1',
   primaryHover: '#7593b0',
-  white: '#FFFFFF'
+  white: '#FFFFFF',
 };
 
 const theme = {
@@ -13,16 +13,16 @@ const theme = {
     backgroundActived: colors.primary,
     backgroundHover: colors.primaryHover,
     borderColor: colors.primary,
-    color: colors.gray
+    color: colors.gray,
   },
   card: {
-    titleColor: colors.grayDark
+    titleColor: colors.grayDark,
   },
   colors,
-  navbar: {
+  header: {
     background: colors.primary,
-    titleColor: colors.white
-  }
+    titleColor: colors.white,
+  },
 };
 
 export default theme;
