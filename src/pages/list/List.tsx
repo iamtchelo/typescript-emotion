@@ -1,18 +1,18 @@
 import * as React from 'react';
-import Button from '../../components/Button';
+import {Button} from '../../components';
 import Card from '../../components/Card';
 import GroupButton from '../../components/GroupButton';
 import ListCards from '../../components/ListCards';
 import Navbar from '../../components/Navbar';
 import pokemons from '../../data/mock';
-import { ActionsWrapper, Container, ListWrapper } from './list.elements';
-import { EnhancedListProps } from './list.hoc';
+import {ActionsWrapper, Container, ListWrapper} from './list.elements';
+import {EnhancedListProps} from './list.hoc';
 
 const List: React.SFC<EnhancedListProps> = ({
   renderType,
   setRenderType,
   theme,
-  setTheme
+  setTheme,
 }) => (
   <ListWrapper>
     <Navbar title="TypeScript + Emotion = ♥" />
@@ -20,7 +20,7 @@ const List: React.SFC<EnhancedListProps> = ({
       <ActionsWrapper>
         <GroupButton>
           <Button
-          // tslint:disable-next-line
+            // tslint:disable-next-line
             onClick={() => setRenderType('grid')}
             actived={renderType === 'grid'}
           >
@@ -36,7 +36,7 @@ const List: React.SFC<EnhancedListProps> = ({
         </GroupButton>
         <GroupButton>
           <Button
-          // tslint:disable-next-line
+            // tslint:disable-next-line
             onClick={() => setTheme('primary')}
             actived={theme === 'primary'}
           >
@@ -52,13 +52,13 @@ const List: React.SFC<EnhancedListProps> = ({
         </GroupButton>
       </ActionsWrapper>
       <ListCards renderType={renderType}>
-        {pokemons.map(pokemon =>
+        {pokemons.map((pokemon) => (
           <Card
             key={pokemon.name}
             title={pokemon.name}
             image={pokemon.avatar}
           />
-        )}
+        ))}
       </ListCards>
     </Container>
   </ListWrapper>

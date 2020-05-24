@@ -1,22 +1,15 @@
 import * as React from 'react';
-import { Button } from './button.elements';
+import {ButtonStyled} from './button.styles';
 
-export interface ButtonProps {
+interface ButtonProps {
   onClick?: (event: any) => void;
   actived?: boolean;
 }
 
-const ButtonSFC: React.SFC<ButtonProps> = ({
-  onClick,
-  actived,
-  children
-}) => (
-  <Button
-    onClick={onClick}
-    actived={actived}
-  >
+const Button: React.SFC<ButtonProps> = ({onClick, actived, children}) => (
+  <ButtonStyled onClick={onClick} actived={actived}>
     {children}
-  </Button>
+  </ButtonStyled>
 );
 
-export default ButtonSFC;
+export {Button, ButtonProps};
