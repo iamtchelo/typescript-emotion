@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "7c9526ec1517616592c6",
-    "url": "/typescript-emotion/static/js/main.7c9526ec.chunk.js"
+    "revision": "0211a957b400ed7cb885",
+    "url": "/typescript-emotion/static/js/main.0211a957.chunk.js"
   },
   {
     "revision": "ffd47fb6d65f3b8f9df4",
@@ -12,7 +12,7 @@ self.__precacheManifest = [
     "url": "/typescript-emotion/static/js/runtime~main.25774fca.js"
   },
   {
-    "revision": "215b308f5c76d5973b21762872a2d7c7",
+    "revision": "6012c3f5041254b7a9923635e29a9ec0",
     "url": "/typescript-emotion/index.html"
   }
 ];
