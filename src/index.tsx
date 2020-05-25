@@ -1,12 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import ThemeProvider from './themes';
+import App from './App';
 
 import './globalStyle';
 
-import List from './pages/list';
-
-ReactDOM.render(
-  <ThemeProvider>{(props: any) => <List {...props} />}</ThemeProvider>,
-  document.getElementById('root') as HTMLElement
-);
+ReactDOM.render(<App />, document.getElementById('root') as HTMLElement);
