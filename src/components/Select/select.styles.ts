@@ -22,7 +22,7 @@ const selectArrow = () => css`
     content: '';
     position: absolute;
     top: 15px;
-    right: 15px;
+    right: 0.5rem;
     z-index: -1;
     cursor: pointer;
     border-left: 6px solid transparent;
