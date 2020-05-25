@@ -1,5 +1,12 @@
 import styled, {css} from 'react-emotion';
 
+const selectContainer = () => css`
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  row-gap: 0.4rem;
+`;
+
 const selectWrapper = () => css`
   position: relative;
   z-index: 1;
@@ -31,6 +38,12 @@ const selectArrow = () => css`
   }
 `;
 
+const labelBase = () => css`
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+`;
+
 const baseSelect = () => css`
   cursor: pointer;
   padding: 0.5rem;
@@ -38,9 +51,13 @@ const baseSelect = () => css`
   appearance: none;
   border: none;
   outline: none;
-  font-size: 15px;
+  font-size: 14px;
   color: white;
   background: none;
+`;
+
+const SelectContainer = styled('div')`
+  ${selectContainer};
 `;
 
 const SelectWrapper = styled('div')`
@@ -48,8 +65,12 @@ const SelectWrapper = styled('div')`
   ${selectArrow};
 `;
 
+const Label = styled('label')`
+  ${labelBase};
+`;
+
 const SelectStyled = styled('select')`
   ${baseSelect};
 `;
 
-export {SelectWrapper, SelectStyled};
+export {SelectContainer, SelectWrapper, Label, SelectStyled};

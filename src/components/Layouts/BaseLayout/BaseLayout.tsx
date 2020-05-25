@@ -19,18 +19,20 @@ const BaseLayout: React.SFC<any> = ({setTheme, setRenderType, children}) => (
           <Title>TypeScript + Emotion = ♥</Title>
           <Actions>
             <Select
-              onChange={(event: any) => setTheme(event.target.value)}
+              label="Theme"
               options={[
                 {value: 'primary', text: 'Primary'},
                 {value: 'secondary', text: 'Secondary'},
               ]}
+              onChange={(event: any) => setTheme(event.target.value)}
             />
             <Select
-              onChange={(event: any) => setRenderType(event.target.value)}
+              label="Render mode"
               options={[
                 {value: 'grid', text: 'Grid'},
                 {value: 'list', text: 'List'},
               ]}
+              onChange={(event: any) => setRenderType(event.target.value)}
             />
           </Actions>
         </Flex>
