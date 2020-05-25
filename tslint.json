@@ -1,18 +1,16 @@
 {
   "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
   "linterOptions": {
-    "exclude": [
-      "config/**/*.js",
-      "node_modules/**/*.ts"
-    ]
+    "exclude": ["config/**/*.js", "node_modules/**/*.ts"]
   },
   "rules": {
     "deprecation": true,
     "no-unused-variable": true,
     "no-unused-expression": true,
     "interface-name": [true, "never-prefix"],
-    "no-console": { "severity": "warning" },
+    "no-console": {"severity": "warning"},
     "prefer-const-enum": true,
-    "max-classes-per-file": true
+    "max-classes-per-file": true,
+    "jsx-no-lambda": false
   }
 }
