@@ -12,7 +12,7 @@ self.__precacheManifest = [
     "url": "/typescript-emotion/static/js/runtime~main.25774fca.js"
   },
   {
-    "revision": "81e8ec8e43e2f702a0e764b602a5b4ec",
+    "revision": "215b308f5c76d5973b21762872a2d7c7",
     "url": "/typescript-emotion/index.html"
   }
 ];
