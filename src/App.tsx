@@ -10,7 +10,7 @@ const enhance = compose(
   withRender
 );
 
-const App: React.SFC<any> = ({
+const App: React.FunctionComponent<any> = ({
   theme,
   renderType,
   setTheme,

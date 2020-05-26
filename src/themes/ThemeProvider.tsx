@@ -16,7 +16,7 @@ interface ThemeProviderProps {
   theme?: Theme;
 }
 
-const ThemeProvider: React.SFC<ThemeProviderProps> = ({
+const ThemeProvider: React.FunctionComponent<ThemeProviderProps> = ({
   theme = 'primary',
   children,
 }) => <Provider theme={themes[theme]}>{children}</Provider>;

@@ -6,7 +6,7 @@ interface CardProps {
   image: string;
 }
 
-const Card: React.SFC<CardProps> = ({title, image}) => (
+const Card: React.FunctionComponent<CardProps> = ({title, image}) => (
   <CardWrapper>
     <CardImage src={image} />
     <CardTitle>{title}</CardTitle>

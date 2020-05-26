@@ -6,7 +6,11 @@ interface ButtonProps {
   actived?: boolean;
 }
 
-const Button: React.SFC<ButtonProps> = ({onClick, actived, children}) => (
+const Button: React.FunctionComponent<ButtonProps> = ({
+  onClick,
+  actived,
+  children,
+}) => (
   <ButtonStyled onClick={onClick} actived={actived}>
     {children}
   </ButtonStyled>

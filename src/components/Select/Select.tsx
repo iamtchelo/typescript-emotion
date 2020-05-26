@@ -18,7 +18,12 @@ interface SelectProps {
   onChange?: (event: any) => any;
 }
 
-const Select: React.SFC<SelectProps> = ({options, label, value, onChange}) => {
+const Select: React.FunctionComponent<SelectProps> = ({
+  options,
+  label,
+  value,
+  onChange,
+}) => {
   return (
     <SelectContainer>
       <Label>{label}</Label>

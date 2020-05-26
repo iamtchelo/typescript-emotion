@@ -11,7 +11,11 @@ import {
   Title,
 } from './baseLayout.styles';
 
-const BaseLayout: React.SFC<any> = ({setTheme, setRenderType, children}) => (
+const BaseLayout: React.FunctionComponent<any> = ({
+  setTheme,
+  setRenderType,
+  children,
+}) => (
   <BaseLayoutWrapper>
     <HeaderItem>
       <Header>
