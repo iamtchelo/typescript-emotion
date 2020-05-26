@@ -23,6 +23,7 @@ const BaseLayout: React.SFC<any> = ({setTheme, setRenderType, children}) => (
               options={[
                 {value: 'primary', text: 'Primary'},
                 {value: 'secondary', text: 'Secondary'},
+                {value: 'terciary', text: 'Terciary'},
               ]}
               onChange={(event: any) => setTheme(event.target.value)}
             />
