@@ -15,14 +15,14 @@ const pokemonService = () => {
     return pokemons.results;
   };
 
-  const getPokemonURL = (pokemon: any): string => {
+  const getPokemonAvatarURL = (pokemon: any): string => {
     const pattern = /(\d+)\/$/;
     const [, pokemonID] = pokemon.url.match(pattern);
 
     return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonID}.png`;
   };
 
-  return {fetchPokemons, getPokemonURL};
+  return {fetchPokemons, getPokemonAvatarURL};
 };
 
 export {pokemonService};

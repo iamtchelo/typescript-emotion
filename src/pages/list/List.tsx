@@ -43,7 +43,7 @@ const List: React.FunctionComponent<any> = ({renderType}) => {
         <Card
           key={pokemon.name}
           title={pokemon.name}
-          image={service.getPokemonURL(pokemon)}
+          image={service.getPokemonAvatarURL(pokemon)}
         />
       ))}
     </Grid>
