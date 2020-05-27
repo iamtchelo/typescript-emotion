@@ -15,7 +15,7 @@ importScripts("/typescript-emotion/workbox-v3.6.3/workbox-sw.js");
 workbox.setConfig({modulePathPrefix: "/typescript-emotion/workbox-v3.6.3"});
 
 importScripts(
-  "/typescript-emotion/precache-manifest.7c75eb3184e7a1da66afad483d77d2b1.js"
+  "/typescript-emotion/precache-manifest.421d37856182f0a9c1000081d5be8d3f.js"
 );
 
 workbox.clientsClaim();
