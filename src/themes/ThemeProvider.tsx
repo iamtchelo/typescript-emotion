@@ -2,15 +2,15 @@ import {ThemeProvider as Provider} from 'emotion-theming';
 import * as React from 'react';
 import primaryTheme from './primary';
 import secondaryTheme from './secondary';
-import terciaryTheme from './terciary';
+import tertiaryTheme from './tertiary';
 
 const themes = {
   primary: primaryTheme,
   secondary: secondaryTheme,
-  terciary: terciaryTheme,
+  tertiary: tertiaryTheme,
 };
 
-type Theme = 'primary' | 'secondary' | 'terciary';
+type Theme = 'primary' | 'secondary' | 'tertiary';
 
 interface ThemeProviderProps {
   theme?: Theme;

@@ -27,7 +27,7 @@ const BaseLayout: React.FunctionComponent<any> = ({
               options={[
                 {value: 'primary', text: 'Primary'},
                 {value: 'secondary', text: 'Secondary'},
-                {value: 'terciary', text: 'Terciary'},
+                {value: 'tertiary', text: 'Tertiary'},
               ]}
               onChange={(event: any) => setTheme(event.target.value)}
             />
