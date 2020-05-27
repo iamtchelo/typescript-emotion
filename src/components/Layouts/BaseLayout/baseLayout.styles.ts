@@ -9,6 +9,7 @@ const baseLayout = () => css`
 const headerItem = () => css`
   position: sticky;
   top: 0;
+  z-index: 1;
   grid-column: 1 / 7;
   grid-row: 1 / 2;
 `;
