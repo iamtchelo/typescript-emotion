@@ -14,18 +14,18 @@ interface CardProps {
 }
 
 const Card: React.FunctionComponent<CardProps> = ({title, image}) => (
-  <CardWrapper>
-    <LazyLoad
-      placeholder={
-        <LoadingContainer>
-          <Loading loading={true} size={40} color="#fff" />
-        </LoadingContainer>
-      }
-    >
+  <LazyLoad
+    placeholder={
+      <LoadingContainer>
+        <Loading loading={true} size={40} color="#999" />
+      </LoadingContainer>
+    }
+  >
+    <CardWrapper>
       <CardImage src={image} />
-    </LazyLoad>
-    <CardTitle>{title}</CardTitle>
-  </CardWrapper>
+      <CardTitle>{title}</CardTitle>
+    </CardWrapper>
+  </LazyLoad>
 );
 
 export {Card, CardProps};
