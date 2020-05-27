@@ -15,7 +15,7 @@ const List: React.FunctionComponent<any> = ({renderType}) => {
       setResponse({...response, loading: true});
 
       try {
-        const data = await service.fetchPokemons({limit: 300});
+        const data = await service.fetchPokemons({limit: 500});
         setResponse({
           data,
           error: false,
