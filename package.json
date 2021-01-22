@@ -22,25 +22,15 @@
     "test": "react-scripts-ts test --env=jsdom"
   },
   "devDependencies": {
-    "@types/enzyme": "^3.1.10",
-    "@types/jest": "^23.0.2",
-    "@types/node": "^10.3.2",
     "@types/react": "^16.8.0",
     "@types/react-dom": "^16.0.6",
     "@types/react-lazyload": "^2.6.0",
     "@types/recompose": "^0.26.1",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0",
-    "enzyme-to-json": "^3.3.4",
     "gh-pages": "^2.0.1",
     "typescript": "^2.9.1"
   },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}",
-      "!**/node_modules/**",
-      "!src/setupTests.ts"
-    ]
+  "resolutions": {
+    "@types/react": "^16.8.0"
   },
   "browserslist": [
     ">0.2%",
